@@ -1,0 +1,43 @@
+body {
+    background-color: #e9ebee;
+    font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+    font-size: 16px;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+h1,
+h5 {
+    text-align: center;
+}
+
+.container {
+    width: 800px;
+    margin: 0 auto;
+    background-color: rgba(165, 165, 170, 0.445);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    font-weight: bold;
+}
+
+.btn,
+span {
+    font-weight: bold;
+}
+
+.modal-title,
+.modal-title-display {
+
+    font-weight: bold;
+}
+
+.modal-body-error,
+.modal-body-global-error,
+.modal-body-display {
+
+    margin: 20px;
+}
