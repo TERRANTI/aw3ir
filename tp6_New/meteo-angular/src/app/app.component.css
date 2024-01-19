@@ -1,0 +1,13 @@
+body {
+    background-color: #202020;
+    color: #f0f0f0;
+}
+
+h1 {
+    background: linear-gradient(141deg, #202020 0%, #303030 51%, #404040 75%);
+    color: #f0f0f0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    text-align: center;
+    margin: 8px 0;
+}

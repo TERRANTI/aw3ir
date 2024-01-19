@@ -1,0 +1,56 @@
+<div *ngIf="meteo && meteo.cod == 200">
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a routerLink="/">🏠</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Météo pour {{meteo.city.name}}</li>
+        </ol>
+    </nav>
+
+    <div class="card" style="width:600px; margin: 0 auto" v-if="meteo">
+        <div class="card-header">
+            {{ meteo.city.name }} / {{ meteo.dt * 1000 | date : "EEEE d LLLL HH:mm" }}
+        </div>
+        <a href="http://maps.google.com/maps?q={{ latlon }}&ll={{ latlon }}&z=5" target="_blank">
+            <img class="card-img-top" src="https://maps.googleapis.com/maps/api/staticmap?markers={{
+            latlon
+          }}&zoom=5&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg" alt="Card image cap" />
+        </a>
+
+        <div *ngFor="let item of meteo.list">
+            <div class="card-body">
+                <div class="card-header">
+                    {{ meteo.city.name }} / {{ item.dt * 1000 | date : "EEEE d LLLL HH:mm" }}
+                </div>
+                <h5 class="card-title">
+                    <i v-bind:class="'wi wi-owm-day-'+meteo.weather[0].id"></i>
+                    {{roundTemperature(item.main.temp - 273.15)}}
+                    <i class="wi wi-celsius"></i>
+                </h5>
+                <p class="card-text">{{item.weather[0].description}}</p>
+            </div>
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <i class="wi wi-cloud"></i> Nuage: {{item.clouds.all}}%
+                </li>
+                <li class="list-group-item">
+                    <i class="wi wi-humidity"></i> Humidité: {{item.main.humidity}}%
+                </li>
+                <li class="list-group-item">
+                    <i class="wi wi-windy"></i> Vent: {{item.wind.speed}} km/h
+                </li>
+                <li class="list-group-item">
+                    <i class="wi wi-sunrise"></i> Levé du soleil: {{item.sys.sunrise}}
+                </li>
+                <li class="list-group-item">
+                    <i class="wi wi-sunset"></i>Couché du soleil: {{item.sys.sunset}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr>

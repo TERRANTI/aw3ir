@@ -1,0 +1,57 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+nav {
+    background-color: #1a1a1a;
+}
+
+nav .breadcrumb-item a {
+    color: #ffffff;
+}
+
+nav .breadcrumb-item.active a {
+    color: #bdbdbd;
+}
+
+.breadcrumb-item.active {
+    color: white;
+}
+
+.card {
+    background-color: #1a1a1a;
+    border: 1px solid #222222;
+}
+
+.card-header {
+    color: #bdbdbd;
+}
+
+.card-body .card-title {
+    color: #ffffff;
+}
+
+.card-body .card-text {
+    color: #bdbdbd;
+}
+
+.list-group-item {
+    background-color: #1a1a1a;
+    border: 1px solid #222222;
+    color: #bdbdbd;
+}
+
+.list-group-item i {
+    margin-right: 5px;
+}
+
+.alert {
+    background-color: #3a3a3a;
+    border: 1px solid #222222;
+    color: #bdbdbd;
+}
+
+.hr {
+    border-top: 1px solid #222222;
+}

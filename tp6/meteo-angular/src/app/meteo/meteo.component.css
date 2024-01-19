@@ -1,0 +1,91 @@
+/* Main Navigation */
+
+nav[aria-label="breadcrumb"] {
+    background-color: #333;
+    border-radius: 0.25rem;
+}
+
+nav[aria-label="breadcrumb"] .breadcrumb-item a {
+    color: #ccc;
+}
+
+nav[aria-label="breadcrumb"] .breadcrumb-item a:hover {
+    color: #fff;
+}
+
+nav[aria-label="breadcrumb"] .breadcrumb-item.active {
+    color: #ccc;
+}
+
+/* Form */
+
+form {
+    background-color: #222;
+    border-radius: 0.25rem;
+    padding: 1rem;
+}
+
+form .form-control {
+    background-color: #444;
+    border-color: #666;
+    color: #ccc;
+}
+
+form .form-control:focus {
+    border-color: #ccc;
+}
+
+form .btn-primary {
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    color: #fff;
+}
+
+form .btn-primary:hover {
+    background-color: #285e8e;
+    border-color: #204d62;
+}
+
+form .btn-primary:disabled {
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    color: #fff;
+}
+
+form .alert-danger {
+    background-color: #c0392b;
+    border-color: #972b19;
+    color: #fff;
+    margin-top: 5px;
+}
+
+form .alert-primary {
+    display: none;
+    background-color: #28b463;
+    border-color: #1c8d41;
+    color: #fff;
+    margin-top: 5px;
+}
+
+form .form-control::placeholder,
+form .text-muted.numcar {
+    color: white !important;
+}
+
+.city-list-dark .list-group {
+    background-color: #333;
+}
+
+.city-list-dark .list-group-item a {
+    color: #0b0909;
+}
+
+.city-list-dark .list-group-item button {
+    color: #fff;
+    background-color: #555;
+    border: 1px solid #777;
+}
+
+.city-list-dark .alert-primary {
+    color: #fff;
+}
